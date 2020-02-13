@@ -1,0 +1,18 @@
+textarea {
+    resize: none;
+}
+
+mat-form-field{
+    width: 400px;
+}
+mat-card-title{
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.buttons button {
+    margin-left: 20%;
+}

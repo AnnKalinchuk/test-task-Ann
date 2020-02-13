@@ -1,0 +1,48 @@
+<div class="container">
+  <h4>Add new book</h4>
+  <form [formGroup]="form" autocomplete="off" novalidate (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Book title" formControlName="Title" id="Title">
+        <mat-hint>Not more then 60 characters long.</mat-hint>
+        <mat-error *ngIf="hasError('Title', 'required')">Title is required</mat-error>
+        <mat-error *ngIf="hasError('Title', 'maxlength')">You have more than 60 characters</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date of published" formControlName="PublishDate"
+          id="PublishDate" readonly (click)="picker.open()">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Description" formControlName="Description">
+        <mat-hint>Not more then 100 characters long.</mat-hint>
+        <mat-error *ngIf="hasError('Description', 'required')">Description is required</mat-error>
+        <mat-error *ngIf="hasError('Description', 'maxlength')">You have more than 100 characters</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Page Count" formControlName="PageCount" id="PageCount">
+        <mat-error *ngIf="hasError('PageCount', 'required')">Page Count is required</mat-error>
+        <mat-error *ngIf="hasError('PageCount', 'min')">You have less than 0</mat-error>
+        <mat-error *ngIf="hasError('PageCount', 'max')">You have more than 1000</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <textarea rows="2" cols="10" matInput type="text" placeholder="Excerpt" formControlName="Excerpt" id="Excerpt">
+      </textarea>
+        <mat-error *ngIf="hasError('Excerpt', 'maxlength')">You have more than 5000 characters</mat-error>
+      </mat-form-field>
+    </p>
+    <p class="buttons">
+      <button type="button" mat-raised-button color="warn" (click)="onClose()">Close</button>
+      <button mat-raised-button color="primary" [disabled]="!form.valid">Create</button>
+    </p>
+  </form>
+</div>

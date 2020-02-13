@@ -1,0 +1,22 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+ }
+
+
+.clear svg {
+    display: none;
+}
+
+.btn.btn-default.clear.ng-star-inserted {
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin-right: 10px;
+    background: pink;
+}
+.md-drppicker {
+    min-width: 600px;
+}
