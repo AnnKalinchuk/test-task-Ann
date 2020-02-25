@@ -1,0 +1,34 @@
+.event-container {
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 5px rgba(124,124,124,0.2));
+    padding: 15px;
+    position: relative;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;   
+}
+
+.number {
+    margin-top: 4px;
+    color:#2b87c9;
+}
+
+.close-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    font-size:14px;  
+}
+
+td {
+    padding-right: 12px;
+}

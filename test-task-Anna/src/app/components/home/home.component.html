@@ -1,0 +1,96 @@
+<!-- 
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+        <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+    <mat-sidenav-content>
+        <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+     
+      <main>
+       
+      </main>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+<!-- <div class="home-wrapper"> 
+    <app-header></app-header>
+    <app-sidenav-list></app-sidenav-list>
+    <app-footer></app-footer>
+</div> -->
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <app-sidenav-list></app-sidenav-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <app-header></app-header>
+        <div class="content">
+            <div class="fast-access">
+              <ul>
+                  <li><a class="calendar" href="#"> <img src="../../../assets/images/calendar2.png" ></a></li>
+                  <li><a class="case" href="#"> <img src="../../../assets/images/case2.png" ></a></li>
+                  <li><a class="perconal" href="#"><img src="../../../assets/images/reports2.png" ></a></li>
+                  <li><a class="reports" href="#"> <img src="../../../assets/images/personnel1.png" ></a></li>
+              </ul>
+            </div>
+            <div class="content-wrapper">
+                <h1>Заголовок 1</h1>
+                <div class="content-inner">
+                    <div class="cards">
+                        <div class="card card-left">
+                            <div class="card-inner">
+                                <h2>Заголовок 2</h2>
+                                <div class="card-table">
+                                    <table>
+                                        <tr>
+                                            <td>Lorem ipsum</td>
+                                            <td>Что-то</td>
+                                        </tr>
+                                        <tr >
+                                            <td>Lorem ipsum</td>
+                                            <td>Что-то</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lorem ipsum</td>
+                                            <td>Что-то</td>
+                                        </tr>
+                                        <tr  >
+                                            <td>Lorem ipsum</td>
+                                            <td>Что-то</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="card-left-footer">
+                                <div class="card-inner footer-inner">
+                                    <div class="card-icons">
+                                        <ul>
+                                           <li><a class="print" href="#"> <img src="../../../assets/images/print.png" ></a></li>
+                                           <li><a class="download" href="#"> <img src="../../../assets/images/download.png" ></a></li>
+                                           <li><a class="edit" href="#"><img src="../../../assets/images/edit.png" ></a></li>
+                                           <li><a class="plus" href="#"> <img src="../../../assets/images/plus.png" ></a></li>
+                                        </ul>  
+                                    </div>
+                                
+                                <div class="buttons">
+                                    <button class ="cancel" >Отмена</button>
+                                    <button class = "save" >Сохранить</button>
+                                </div>                               
+                            </div>
+                            </div>
+                        </div>
+                        <div class="card card-right">
+                            <h2>Напоминания (обуч.)</h2>
+                            <ul>
+                                <li><a href="#">Напоминание о чем-то важном 1 <img src ="../../../assets/images/arrow-right.png"></a></li>
+                                <li><a href="#">Напоминание о чем-то важном 2 <img src ="../../../assets/images/arrow-right.png"></a></li>
+                                <li><a href="#">Напоминание о чем-то важном 3 <img src ="../../../assets/images/arrow-right.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <app-footer class="footer"></app-footer>
+    </mat-drawer-content>
+</mat-drawer-container>

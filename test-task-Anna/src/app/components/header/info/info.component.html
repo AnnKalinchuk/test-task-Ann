@@ -1,0 +1,12 @@
+<div class = "info-container">
+  <div *ngIf="pageInfo">
+    <ul>
+      <li *ngFor="let item of pageInfo.tooltips">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!pageInfo">
+    Подсказок нет
+  </div>
+</div>

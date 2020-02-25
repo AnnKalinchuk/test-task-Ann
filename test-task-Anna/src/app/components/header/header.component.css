@@ -1,0 +1,109 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+    align-items: center;     
+    padding: 15px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.header-search {
+    padding: 0px 20px 0px 10px;
+} 
+.header-left, .header-right {
+    display: flex;
+}
+.arrow-back, .add-box, .add {
+    margin-right:10px;
+    cursor:pointer;
+}
+.icon-gray {
+    color:gray;
+    font-size: 14px;
+}
+input {
+    background-image: url(../../../assets/images/search.png); 
+    background-size: 18px;  
+    background-repeat: no-repeat; 
+    background-position: 190px;  
+    padding-left: 20px; 
+}
+
+.events-container {
+    display: flex;
+    justify-content: left;
+}
+
+.events-container * {
+    margin: 5px;
+}
+
+.notifications-container {
+    position: fixed;
+    right: 20px;
+    top: 50px;
+}
+
+.info-container {
+    position: fixed;
+    right: 20px;
+    top: 50px; 
+}
+
+#date {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #3a3a3a;
+    font-family: "Myriad Pro";
+}
+/* #date:hover {
+    background-color: #3a3a3a;
+} */
+
+button.profile, button.notification {
+    margin-left:10px;
+    border-radius: 50%;
+
+    border-width: 0px;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+}
+
+button.profile {
+    width: 35px;
+    height: 35px;
+    background-color: #2b87c9;
+    color:white;
+
+}
+button.notification {
+    margin-top:2px;
+    width: 30px;
+    height: 30px;
+    background-color: #2358ae;
+}
+.notification-wrapper {
+    position: relative;
+}
+.circle-red {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color:white;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border:1px solid #fff;
+    text-align: center;
+    font-size: 11px;
+
+}
+.info, .apps {
+    cursor: pointer;
+    padding-top: 4px;
+    margin-left: 10px ;
+}

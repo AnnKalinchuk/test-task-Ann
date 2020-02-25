@@ -1,0 +1,56 @@
+<header>
+  <div class="header-container">
+     <div class="header-left">
+       <!--  <button  class = "icon-gray" mat-icon-button  (click)="onToggleSidenav()" id="menu" >
+          <mat-icon>menu</mat-icon>
+        </button> -->
+        <div class="arrow-back" id="arrow-back" >
+          <img src = "../../../assets/images/arrow.png">
+        </div>
+        <div class="add" id="add" >
+          <img src = "../../../assets/images/add.png">
+        </div> 
+        <div class="add-box" id="add-box" >
+          <img src = "../../../assets/images/add-box.png">
+        </div> 
+        <input class = "header-search" type="text" placeholder="Поиск">
+     </div>
+    <div class="header-right ">
+      <div  [ngStyle]="{ 'background-color': showLatestEvents === true? '#e5e5e5':'transparent'}"  id="date" (click)="onShowLatestEventsClicked()" >
+        <div class="time">
+          {{date   | date: "HH:mm"}}
+        </div>
+        <div class="date">
+          {{date   | date: "dd.MM.yyyy"}}
+        </div>
+      </div>  
+      <div class="info" id="info"  (click)="onShowInfoClicked()">
+        <img src = "../../../assets/images/info.png">
+      </div> 
+      <div class="apps" id="apps" >
+        <img src = "../../../assets/images/apps-menu.png">
+      </div> 
+      <div class="notification-wrapper">
+        <button  class = "notification" id="notification" (click)="onShowNotificationsClicked()" >
+          <img src = "../../../assets/images/bell-solid.png">
+        </button>
+        <div class="circle-red">{{notifications.length}}</div>
+      </div>
+      <button  class = "profile">A</button>
+    </div>
+  </div>
+
+  <div *ngIf="showLatestEvents" class="events-container">
+    <app-event *ngFor="let event of latestEvents" [model]="event" (close)="onEventClose($event)">
+    </app-event>
+  </div>
+
+  <div *ngIf="showNotifications" class="notifications-container">
+    <app-notification *ngFor="let notification of notifications" [model]="notification" (close)="onNotificationClose($event)">
+    </app-notification>
+  </div>
+
+  <div *ngIf="showInfo" class="info-container">
+    <app-info></app-info>
+  </div>
+</header>

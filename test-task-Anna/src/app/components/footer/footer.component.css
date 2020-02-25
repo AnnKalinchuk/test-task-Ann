@@ -1,0 +1,15 @@
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #e2e2e2;
+    
+}
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.footer-left .item {
+    margin-left:15px;
+}
